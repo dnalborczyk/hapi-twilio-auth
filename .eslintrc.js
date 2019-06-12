@@ -15,4 +15,9 @@ module.exports = {
   // jsx http://facebook.github.io/jsx/
   // flow types https://flowtype.org/
   parser: 'babel-eslint',
+
+  rules: {
+    // turn off rules
+    'import/extensions': 'off',
+  },
 }
