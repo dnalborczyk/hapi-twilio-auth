@@ -16,6 +16,11 @@ module.exports = {
   // flow types https://flowtype.org/
   parser: 'babel-eslint',
 
+  env: {
+    // add global jest types
+    jest: true,
+  },
+
   rules: {
     // turn off rules
     'import/extensions': 'off',
