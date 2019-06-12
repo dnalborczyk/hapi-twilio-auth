@@ -41,7 +41,9 @@ describe('scheme options', () => {
       server.auth.strategy('twilio', 'twilio-signature', {
         url: 'http://www.foo.com',
       }),
-    ).toThrow('Twilio "authToken" is required for webhook request validation.')
+    ).toThrow(
+      'Twilio "authToken" is required for webhook request authentication.',
+    )
   })
 
   test('should fail if url is not provided', () => {
@@ -49,6 +51,6 @@ describe('scheme options', () => {
       server.auth.strategy('twilio', 'twilio-signature', {
         authToken: 'foo',
       }),
-    ).toThrow('Twilio "url" is required for webhook request validation.')
+    ).toThrow('Twilio "url" is required for webhook request authentication.')
   })
 })

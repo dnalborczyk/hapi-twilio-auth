@@ -7,12 +7,14 @@ export default function scheme(server, options) {
 
   if (!authToken) {
     throw new Error(
-      'Twilio "authToken" is required for webhook request validation.',
+      'Twilio "authToken" is required for webhook request authentication.',
     )
   }
 
   if (!url) {
-    throw new Error('Twilio "url" is required for webhook request validation.')
+    throw new Error(
+      'Twilio "url" is required for webhook request authentication.',
+    )
   }
 
   return {
