@@ -55,5 +55,13 @@ describe('scheme options', () => {
       'Twilio "baseUrl" is required for webhook request authentication.',
     )
   })
+
+  test('should fail if baseUrl is not a valid URL', () => {
+    expect(() =>
+      server.auth.strategy('twilio', 'twilio-signature', {
+        authToken: 'foo',
+        baseUrl: 'foo',
+      }),
+    ).toThrow('Twilio "baseUrl" is not a valid URL.')
   })
 })

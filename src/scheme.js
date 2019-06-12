@@ -17,6 +17,13 @@ export default function scheme(server, options) {
     )
   }
 
+  // check if we have a valid URL
+  try {
+    new URL(baseUrl) // eslint-disable-line no-new
+  } catch (e) {
+    throw new Error('Twilio "baseUrl" is not a valid URL.')
+  }
+
   return {
     async authenticate() {
       return true
