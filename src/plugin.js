@@ -4,5 +4,7 @@ import pkg from '../package.json'
 export default {
   // name and version will be loaded from package.json
   pkg,
-  register() {},
+  register(server) {
+    server.auth.scheme('twilio-signature', scheme)
+  },
 }
