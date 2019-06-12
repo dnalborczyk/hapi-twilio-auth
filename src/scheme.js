@@ -2,7 +2,7 @@ export default function scheme(server, options) {
   const {
     // if not set in plugin options, use env if provided
     authToken = process.env.TWILIO_AUTH_TOKEN,
-    url,
+    baseUrl,
   } = options
 
   if (!authToken) {
@@ -11,9 +11,9 @@ export default function scheme(server, options) {
     )
   }
 
-  if (!url) {
+  if (!baseUrl) {
     throw new Error(
-      'Twilio "url" is required for webhook request authentication.',
+      'Twilio "baseUrl" is required for webhook request authentication.',
     )
   }
 

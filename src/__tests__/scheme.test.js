@@ -17,11 +17,11 @@ describe('scheme options', () => {
     return server.stop()
   })
 
-  test('should work when twilio auth token and url is provided', () => {
+  test('should work when twilio auth token and baseUrl is provided', () => {
     expect(() =>
       server.auth.strategy('twilio-auth', 'twilio-signature', {
         authToken: 'foo',
-        url: 'http://www.foo.com',
+        baseUrl: 'http://www.foo.com',
       }),
     ).not.toThrow()
   })
@@ -31,7 +31,7 @@ describe('scheme options', () => {
 
     expect(() =>
       server.auth.strategy('twilio', 'twilio-signature', {
-        url: 'http://www.foo.com',
+        baseUrl: 'http://www.foo.com',
       }),
     ).not.toThrow()
   })
@@ -39,18 +39,21 @@ describe('scheme options', () => {
   test('should fail if twilio auth token is not provided', () => {
     expect(() =>
       server.auth.strategy('twilio', 'twilio-signature', {
-        url: 'http://www.foo.com',
+        baseUrl: 'http://www.foo.com',
       }),
     ).toThrow(
       'Twilio "authToken" is required for webhook request authentication.',
     )
   })
 
-  test('should fail if url is not provided', () => {
+  test('should fail if baseUrl is not provided', () => {
     expect(() =>
       server.auth.strategy('twilio', 'twilio-signature', {
         authToken: 'foo',
       }),
-    ).toThrow('Twilio "url" is required for webhook request authentication.')
+    ).toThrow(
+      'Twilio "baseUrl" is required for webhook request authentication.',
+    )
+  })
   })
 })
