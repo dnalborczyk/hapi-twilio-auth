@@ -1,14 +1,15 @@
 import { resolve } from 'path'
+import { sizeSnapshot } from 'rollup-plugin-size-snapshot'
 
 // external dependencies:
 // if we don't specify, rollup gives an 'unresolved' warning
 const external = [
-  // node own
+  // node builtin
   'url',
   // 3rd party
   '@hapi/boom',
   'twilio',
-  // json
+  // static json
   resolve(__dirname, 'package.json'),
 ]
 
@@ -21,6 +22,7 @@ export default [
       format: 'cjs',
       preferConst: true,
     },
+    plugins: [sizeSnapshot()],
   },
   {
     external,
@@ -30,5 +32,6 @@ export default [
       format: 'esm',
       preferConst: true,
     },
+    plugins: [sizeSnapshot()],
   },
 ]
