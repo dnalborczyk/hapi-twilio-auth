@@ -22,7 +22,7 @@ module.exports = {
   },
 
   rules: {
-    // turn off rules
-    'import/extensions': 'off',
+    // overwrite
+    'import/extensions': 'always',
   },
 }
