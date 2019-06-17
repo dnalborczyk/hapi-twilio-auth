@@ -26,6 +26,14 @@
     "node": ">=8"
   },
   "sideEffects": false,
+  "homepage": "https://github.com/dnalborczyk/hapi-twilio-auth",
+  "bugs": {
+    "url": "https://github.com/dnalborczyk/hapi-twilio-auth/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dnalborczyk/hapi-twilio-auth.git"
+  },
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.4.4",
     "@hapi/hapi": "^18.3.1",
