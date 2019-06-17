@@ -12,8 +12,8 @@
     "test:cov": "jest --coverage"
   },
   "keywords": [],
-  "license": "ISC",
   "author": "Daniel Nalborczyk",
+  "license": "MIT",
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.4.4",
     "@hapi/hapi": "^18.3.1",
