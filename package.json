@@ -26,6 +26,12 @@
     "node": ">=8"
   },
   "sideEffects": false,
+  "files": [
+    "bundle.cjs.js",
+    "bundle.esm.js",
+    "LICENSE",
+    "package.json"
+  ],
   "homepage": "https://github.com/dnalborczyk/hapi-twilio-auth",
   "bugs": {
     "url": "https://github.com/dnalborczyk/hapi-twilio-auth/issues"
