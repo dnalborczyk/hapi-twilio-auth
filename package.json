@@ -11,7 +11,15 @@
     "test": "jest",
     "test:cov": "jest --coverage"
   },
-  "keywords": [],
+  "keywords": [
+    "hapi",
+    "plugin",
+    "webhook",
+    "authentication",
+    "twilio",
+    "signature",
+    "scheme"
+  ],
   "author": "Daniel Nalborczyk",
   "license": "MIT",
   "engines": {
