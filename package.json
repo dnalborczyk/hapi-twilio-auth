@@ -30,6 +30,7 @@
     "bundle.cjs.js",
     "bundle.esm.js",
     "LICENSE",
+    "README.md",
     "package.json"
   ],
   "homepage": "https://github.com/dnalborczyk/hapi-twilio-auth",
