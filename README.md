@@ -27,7 +27,6 @@ import hapiTwilioAuth from 'hapi-twilio-auth'
 const { Server } = hapi
 
 async function startServer() {
-
   const server = new Server({
     port: 3000,
   })
@@ -41,11 +40,11 @@ async function startServer() {
 
   server.route({
     method: 'POST',
-    path:'/',
+    path: '/',
     handler(request, h) {
       // ...
     },
-  });
+  })
 
   await server.start()
 }
