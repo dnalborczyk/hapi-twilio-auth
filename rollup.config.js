@@ -13,6 +13,8 @@ const external = [
   resolve(__dirname, 'package.json'),
 ]
 
+const preferConst = true
+
 export default [
   {
     external,
@@ -20,7 +22,7 @@ export default [
     output: {
       file: 'dist/bundle.cjs.js',
       format: 'cjs',
-      preferConst: true,
+      preferConst,
     },
     plugins: [sizeSnapshot()],
   },
@@ -30,7 +32,7 @@ export default [
     output: {
       file: 'dist/bundle.esm.js',
       format: 'esm',
-      preferConst: true,
+      preferConst,
     },
     plugins: [sizeSnapshot()],
   },
