@@ -2,6 +2,16 @@
 
 [Hapi](https://github.com/hapijs/hapi) plugin for [Twilio](https://github.com/twilio/twilio-node) request validation.
 
+<p>
+  <a href="https://www.npmjs.com/package/hapi-twilio-auth"><img src="https://img.shields.io/npm/v/hapi-twilio-auth.svg?style=flat-square"></a>
+  <a href="https://travis-ci.com/dnalborczyk/hapi-twilio-auth"><img src="https://img.shields.io/travis/dnalborczyk/hapi-twilio-auth.svg?style=flat-square"></a>
+  <img src="https://img.shields.io/node/v/hapi-twilio-auth.svg?style=flat-square">
+  <img src="https://img.shields.io/npm/dependency-version/hapi-twilio-auth/peer/@hapi/hapi.svg?style=flat-square">
+  <img src="https://img.shields.io/npm/dependency-version/hapi-twilio-auth/peer/twilio.svg?style=flat-square">
+  <img src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square">
+  <img src="https://img.shields.io/npm/l/hapi-twilio-auth.svg?style=flat-square">
+</p>
+
 ### install
 
 ```cli
