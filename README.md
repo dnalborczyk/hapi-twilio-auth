@@ -1,6 +1,6 @@
 # hapi-twilio-auth
 
-Hapi plugin for Twilio request validation.
+[Hapi](https://github.com/hapijs/hapi) plugin for [Twilio](https://github.com/twilio/twilio-node) request validation.
 
 ### install
 
