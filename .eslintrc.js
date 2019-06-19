@@ -23,6 +23,7 @@ module.exports = {
 
   rules: {
     // overwrite
-    'import/extensions': 'always',
+    // require file extensions
+    'import/extensions': ['error', 'always', { ignorePackages: true }],
   },
 }
