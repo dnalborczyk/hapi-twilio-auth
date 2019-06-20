@@ -41,6 +41,9 @@
     "type": "git",
     "url": "https://github.com/dnalborczyk/hapi-twilio-auth.git"
   },
+  "dependencies": {
+    "@hapi/boom": "^7.4.2"
+  },
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.4.4",
     "@hapi/hapi": "^18.3.1",
@@ -60,8 +63,5 @@
   "peerDependencies": {
     "@hapi/hapi": ">= 18.2.0 < 19.0.0",
     "twilio": ">= 3.29.0 < 4.0.0"
-  },
-  "dependencies": {
-    "@hapi/boom": "^7.4.2"
   }
 }
