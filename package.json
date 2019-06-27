@@ -30,12 +30,12 @@
   "files": [
     "bundle.cjs.js",
     "bundle.esm.js",
-    "src/index.js",
-    "src/plugin.js",
-    "src/scheme.js",
+    "package.json",
     "LICENSE",
     "README.md",
-    "package.json"
+    "src/index.js",
+    "src/plugin.js",
+    "src/scheme.js"
   ],
   "homepage": "https://github.com/dnalborczyk/hapi-twilio-auth",
   "bugs": {
