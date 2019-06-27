@@ -1,4 +1,5 @@
 import { resolve } from 'path'
+import babel from 'rollup-plugin-babel'
 import { sizeSnapshot } from 'rollup-plugin-size-snapshot'
 
 const options = {
@@ -26,7 +27,7 @@ export default [
       format: 'cjs',
       preferConst,
     },
-    plugins: [sizeSnapshot()],
+    plugins: [babel(), sizeSnapshot()],
   },
   {
     ...options,
@@ -35,6 +36,6 @@ export default [
       format: 'esm',
       preferConst,
     },
-    plugins: [sizeSnapshot()],
+    plugins: [babel(), sizeSnapshot()],
   },
 ]
