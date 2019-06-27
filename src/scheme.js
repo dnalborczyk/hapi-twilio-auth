@@ -1,3 +1,5 @@
+// @flow strict
+
 import { URL } from 'url'
 import boom from '@hapi/boom'
 import twilio from 'twilio'
@@ -8,20 +10,25 @@ const { badRequest, unauthorized } = boom
 // in hapi, all headers are lower cased
 const TWILIO_SIGNATURE_HEADER = 'x-twilio-signature'
 
-export default function scheme(server, options) {
+export type Options = $ReadOnly<{
+  authToken?: string,
+  baseUrl: string,
+}>
+
+export default function scheme(server: any, options: Options) {
   const {
     // if not set in plugin options, use env if provided
     authToken = process.env.TWILIO_AUTH_TOKEN,
     baseUrl,
   } = options
 
-  if (!authToken) {
+  if (authToken == null) {
     throw new Error(
       'Twilio "authToken" is required for webhook request authentication.',
     )
   }
 
-  if (!baseUrl) {
+  if (baseUrl == null) {
     throw new Error(
       'Twilio "baseUrl" is required for webhook request authentication.',
     )
@@ -37,7 +44,7 @@ export default function scheme(server, options) {
   return {
     // lifecycle method called for each incoming request configured the
     // authentication scheme
-    authenticate(request, h) {
+    authenticate(request: any, h: any) {
       const {
         _isPayloadPending,
         headers: { [TWILIO_SIGNATURE_HEADER]: signature },
@@ -70,7 +77,7 @@ export default function scheme(server, options) {
     },
 
     // lifecycle method to authenticate the request payload
-    payload(request, h) {
+    payload(request: any, h: any) {
       const {
         headers: { [TWILIO_SIGNATURE_HEADER]: signature },
         path,
