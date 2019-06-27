@@ -30,6 +30,9 @@
   "files": [
     "bundle.cjs.js",
     "bundle.esm.js",
+    "src/index.js",
+    "src/plugin.js",
+    "src/scheme.js",
     "LICENSE",
     "README.md",
     "package.json"
