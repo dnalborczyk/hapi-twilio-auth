@@ -3,7 +3,7 @@ import plugin from '../index.js'
 
 const { Server } = hapi
 
-describe('scheme options', () => {
+describe('scheme', () => {
   let server
 
   beforeEach(async () => {
